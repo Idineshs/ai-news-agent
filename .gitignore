@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+run_logs.jsonl
+seen_urls.json
+seen_urls_backup.json
+.DS_Store
