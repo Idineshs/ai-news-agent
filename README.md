@@ -2,6 +2,7 @@
 
 An automated Python briefing agent built with a **Prompt Chaining** workflow. It aggregates recent AI and technology articles from curated RSS feeds, deduplicates previously sent stories, summarizes the top highlights using Google Gemini (`gemini-3.8-flash`), and delivers a scannable morning digest via email to one or more recipients.
 
+> **Builder Note & Privacy Disclaimer:** Built by **Dinesh**—a Data Engineer who started out in System Administration and learns new technologies hands-on out of genuine curiosity, experimenting with agentic workflows alongside **Claude** and **Gemini**. This repository is a local Proof of Concept (PoC) intended strictly for testing with **synthetic/fictional data**. Never record real customer Personally Identifiable Information (PII), policy numbers, or confidential company details using public API endpoints.
 ## Architecture & Workflow
 
 1. **Ingestion & Filtering (`fetch_fresh_items`):** Parses RSS/Atom feeds (`O'Reilly Radar`, `The Verge AI`, `TechCrunch AI`), filters out articles older than 30 hours, and skips links already recorded in `seen_urls.json`.
