@@ -18,3 +18,23 @@ ai_news-agent/
 ├── .env.example         # Template for required environment variables
 ├── .gitignore           # Excludes .env, .venv, logs, and state files
 └── README.md            # Project documentation
+
+## How to Get a 16-Character Google App Password (`APP_PASSWORD`)
+
+Gmail requires a 16-character **App Password** (rather than your regular Gmail login password) when sending mail via SMTP (`smtp.gmail.com`) with 2-Step Verification enabled.
+
+1. **Enable 2-Step Verification on Your Google Account**
+   * Go to your [Google Account](https://myaccount.google.com/) and open **Security**.
+   * Under **How you sign in to Google**, select **2-Step Verification** and follow the prompts to turn it on if it is not already active.
+
+2. **Open App Passwords**
+   * Visit [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords) (or search for **App passwords** inside your Google Account settings).
+
+3. **Create an App Password**
+   * Enter a descriptive **App name** (for example, `AI News Digest Agent`).
+   * Click **Create**.
+
+4. **Copy the 16-Character Code**
+   * Google will display a 16-character password (often shown in four groups of four characters, such as `abcd efgh ijkl mnop`).
+   * Copy the code and paste it into your `.env` file as `APP_PASSWORD` (with or without spaces—most setups work cleanly without spaces, e.g., `APP_PASSWORD=abcdefghijklmnop`).
+   * Click **Done** (note that Google will not show the code again once you leave the screen).
